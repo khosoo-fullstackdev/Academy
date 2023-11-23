@@ -134,7 +134,6 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-
   background-color: rgba(0, 0, 0, 0.383);
   color: white;
   opacity: 0;
@@ -206,24 +205,76 @@ button:hover {
   background-image: url(../cards/imgs/banner\ khan\ abnl.jpeg);
 }
 .storys {
-  background-color: burlywood;
   width: 100%;
   height: 280.5px;
 }
 .s_head {
-  background-color: indianred;
   width: 100%;
-  height: 45.5px;
+  height: 25px;
+  margin-bottom: 20px;
 }
 .story {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.story div {
-  background-color: cornflowerblue;
-  width: 132px;
+.st {
+  position: relative;
+}
+
+.s_head p {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+  font-family: Neue, sans-serif, Arial;
+}
+.s_head span {
+  color: #fff;
+  padding: 2px 3px;
+  background-color: #00b0f4;
+  border-radius: 3px;
+  font-size: 18px;
+  font-family: Neue, sans-serif, Arial;
+}
+.story .st {
+  background-size: 100%;
+  background-image: url(../cards/imgs/blck-655ebec106d98855511145.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  width: 170px;
   height: 235px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.st .sheads {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.st:hover {
+  background-size: 110%;
+  transition: 0.4s ease-in-out;
+}
+.sheads img {
+  height: 30px;
+}
+.sheads {
+  height: 30px;
+  padding: 10px;
+}
+.s_text {
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #fff;
+  margin-bottom: 5px;
+  font-family: elvetica Neue, sans-serif, Arial;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .main_news {
   background-color: darkseagreen;
