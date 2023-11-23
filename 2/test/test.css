@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font: normal 14px/22px Helvetica Neue, sans-serif, Arial;
 }
 
 .container {
@@ -36,12 +37,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+
   height: 50%;
   width: 100%;
 }
 .tn_left {
-  width: 50%;
+  width: 49.5%;
   height: 301px;
   padding-left: 40px;
   padding-right: 15px;
@@ -79,22 +80,19 @@ button:hover {
   opacity: 0.4;
   font-size: 13px;
   line-height: 20px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .icons {
   display: flex;
   margin-top: 30px;
   cursor: pointer;
 }
-
 .share {
-  opacity: 0.4;
   display: flex;
   align-items: center;
   background: #f0efef;
   border: 1px solid transparent;
   border-radius: 100px;
-  color: #000;
+  color: #8e8e8e;
   padding: 5px 10px;
   margin-right: 20px;
   transition: all 0.4s ease-in-out;
@@ -118,8 +116,7 @@ button:hover {
 }
 .tn_right {
   display: flex;
-  margin: auto;
-  width: 50%;
+  width: 49.5%;
   height: 100%;
   background-image: url(../cards/imgs/main2.jpeg);
   background-size: 100%;
@@ -159,7 +156,7 @@ button:hover {
   height: 50%;
 }
 .bnewsbanner .imgs {
-  height: 100%;
+  height: 100% !important;
 }
 .b_news {
   width: 100%;
@@ -170,14 +167,30 @@ button:hover {
 }
 .bnews {
   height: 100%;
-  width: 25%;
-  padding-left: 15px;
+  width: 24%;
 }
 .b_news .imgs {
   height: 50%;
   background-size: 100%;
   background-repeat: no-repeat;
   border-radius: 5px;
+}
+.bnews_text {
+  margin-top: 10px;
+}
+.bnews_icons {
+  display: flex;
+  margin-top: 10px;
+  color: #8e8e8e;
+}
+.bnews_share {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.bnews_comm {
+  display: flex;
+  align-items: center;
 }
 
 .b_news .img1 {
