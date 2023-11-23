@@ -1,0 +1,40 @@
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 48px;
+    width: 241px;
+  }
+  .imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  img {
+    width: 148px;
+    height: 148px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .part2 {
+    display: flex;
+    justify-content: center;
+  }
+  .part2 span {
+    font-size: 16px;
+  }
+  h2 {
+    width: 315px;
+    text-align: center;
+    font-size: 32px;
+  }
+  .part2_right {
+    background: none;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+}

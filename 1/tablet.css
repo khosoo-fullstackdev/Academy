@@ -1,0 +1,32 @@
+@media screen and (max-width: 744px) {
+  h1 {
+    font-size: 64px;
+  }
+  .imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .part1 img {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .part2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .part2_right {
+    width: 0;
+    height: 0;
+  }
+  footer {
+    padding: 40px;
+  }
+}
