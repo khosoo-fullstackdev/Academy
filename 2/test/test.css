@@ -277,19 +277,51 @@ button:hover {
   left: 0;
 }
 .main_news {
-  background-color: darkseagreen;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
 }
-.mn_left div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: grey;
+.mn_lefthead {
+  height: 60.87px;
+}
+.mn_left {
+  margin-top: 50px;
+}
+.mnleft {
   width: 690px;
   height: 150px;
+  margin-top: 40px;
+  display: flex;
+}
+.left_text {
+  padding-left: 30px;
+  width: 450px;
+}
+.left_title {
+  font-size: 19px;
+  font-weight: 700;
+  font-family: Helvetica Neue, sans-serif;
+  line-height: 26px;
+}
+.left_subt {
+  color: #888;
+  font-size: 14px;
   margin-top: 10px;
+  margin-bottom: 15px;
+  font-family: Helvetica Neue, sans-serif, Arial;
+}
+.mn_left .left_img {
+  background-image: url(../cards/imgs/313189-23112023-1700736272-520661040-D.Bayaraa_845_8.jpg);
+  width: 210px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 0.4s ease-in-out;
+  background-position: center;
+}
+.mnleft:hover .left_img {
+  background-size: 110%;
+  transition: all 0.4s ease-in-out;
 }
 .mn_right {
   display: flex;
