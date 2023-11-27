@@ -12,3 +12,4 @@ if ((midTerm1 + midTerm2 + final) / 3 < 60) {
 } else {
   console.log("A");
 }
+Audio;
