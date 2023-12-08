@@ -11,6 +11,9 @@
 // Jishee n:
 // input: 10 20 2
 // output: [10,12,14,16,18,20]
+
+
+
 // 1.
 function downGrade(a){
     for (let i = a; i >= 0; i=i-3) {
