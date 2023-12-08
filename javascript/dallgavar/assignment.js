@@ -33,11 +33,13 @@ betweenPrint(15,9)
 
 
 // 3.
-function array(a,b,c){
-    let answer =[]
+function num(a,b,c){
+    let array =[];
+    let count =-1;
     for (let i = a; i<=b; i=i+c){
-        answer = answer+[i]
+        count++;
+        array[count]= i;
     }
-    console.log(answer)
+    console.log(array)
 }
-array(9,15,3)
+num(9,15,3)
