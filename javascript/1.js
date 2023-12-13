@@ -5,19 +5,18 @@ let sentence= `As he crossed toward the pharmacy at the corner he involuntarily 
     of those who were carrying this sky, these boughs, this gliding façade.`
 let count = 0
 let alphabets = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPPQRSTUVWXYZ'
-let words = [];
-let letters = [];
+let words = 0;
+let letters = 0;
 let array = []
 for (let i=0; i<sentence.length; i++){
-    if (sentence.charAt(i)==` `|| sentence.charAt(i)==`.` || sentence.charAt(i)==`,`){
-        words++
+    for ( let j= 0; j<alphabets.length; j++){
+        if (sentence.charAt(i)==` `|| sentence.charAt(i)==`.` || sentence.charAt(i)==`,`){
+            words++
+            array[count]= [words]+[letters]
+        }
+        if (sentence.charAt(i)== alphabets.charAt(j)){
+            letters++
+        }
     }
-    if (sentence.charAt(i)){
-        letters++
-    }
-    if (sentence.charAt(i)==` `|| sentence.charAt(i)==`.` || sentence.charAt(i)==`,`){
-        letters--
-    }
-    array[count]= [words]+[letters]
 }
 console.log(array)
