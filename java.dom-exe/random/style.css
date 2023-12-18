@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#root {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
