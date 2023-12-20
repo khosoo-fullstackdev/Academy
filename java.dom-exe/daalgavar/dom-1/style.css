@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#root {
+  max-width: 1115px;
+  margin: auto;
+}
+.newsCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 690px;
+  height: 150px;
+  background-color: aqua;
+  margin-top: 40px;
+}
+img {
+  width: 210px;
+  height: 150px;
+}
+.cardRight {
+  padding-left: 30px;
+  width: 450px;
+}
+.title {
+  font-size: 19px;
+  font-weight: 700;
+  font-family: Helvetica Neue, sans-serif;
+  line-height: 26px;
+}
+.descrip {
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-family: Helvetica Neue, sans-serif, Arial;
+}
