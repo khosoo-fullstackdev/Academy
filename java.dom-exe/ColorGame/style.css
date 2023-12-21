@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.header {
+  background-color: #ecf0f1;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid;
+}
+
+.gamebody {
+  /* max-width: 1000px; */
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 5px; */
+}
+
+.card {
+}

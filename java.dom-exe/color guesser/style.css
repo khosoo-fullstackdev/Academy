@@ -3,3 +3,49 @@
   margin: 0;
   padding: 0;
 }
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 50px;
+}
+.score {
+  border: solid grey 1px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.chance {
+  border: solid grey 1px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.startgame {
+  border: solid grey 1px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: white;
+}
+.box {
+  width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.gamebody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 20px;
+}
+.card {
+  width: 100px;
+  height: 100px;
+}
