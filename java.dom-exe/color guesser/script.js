@@ -11,8 +11,9 @@ header.setAttribute("class", "header");
 score.setAttribute("class", "score");
 chance.setAttribute("class", "chance");
 let count = 0;
+let chanceCount = 3;
 score.innerText = "Оноо:" + count;
-chance.innerText = "Боломж:";
+chance.innerText = "Боломж:" + chanceCount;
 root.appendChild(header);
 gameBody.setAttribute("class", "gamebody");
 startButton.setAttribute("class", "startgame");
@@ -38,11 +39,22 @@ function startGame() {
       diffCard.setAttribute("class", "card");
       diffCard.addEventListener("click", () => {
         count++;
+        score.innerText = "Оноо:" + count;
+        console.log(count);
+        startGame();
       });
       diffCard.style.backgroundColor = diffrentColor;
     }
+    card.addEventListener("click", () => {
+      chanceCount--;
+      chance.innerText = "Боломж:" + chanceCount;
+      if (chanceCount == 0) {
+        startGame();
+      }
+    });
     box.appendChild(card);
   }
+
   gameBody.innerHTML = "";
   gameBody.appendChild(box);
 }
