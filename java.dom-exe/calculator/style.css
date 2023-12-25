@@ -4,7 +4,15 @@
   padding: 0;
 }
 #root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 1115px;
   margin: auto;
   text-align: center;
+}
+.calculator {
+  background-color: aqua;
+  width: 487.6px;
+  height: 865.5px;
 }
