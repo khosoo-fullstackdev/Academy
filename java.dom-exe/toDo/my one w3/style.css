@@ -12,14 +12,23 @@ body {
   height: 1000px;
 }
 .boards {
-  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
   margin: auto;
 }
 .board {
+  display: flex;
+  flex-direction: column;
   width: 200px;
-  height: 400px;
+  height: 100%;
   background-color: bisque;
+  gap: 20px;
 }
+
 @media screen and (max-width: 1400px) {
   #root {
     width: 1140px;
