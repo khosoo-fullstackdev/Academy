@@ -8,6 +8,11 @@ body {
   background-image: url(./sunset-brook-green-meadow-june-df867360f0bed19da26bbb3838498c8f.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  margin: auto;
   width: 1140px;
   height: 1000px;
 }
@@ -15,10 +20,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 100px;
   width: 100%;
-  height: 100%;
-  margin: auto;
+  height: 50%;
 }
 .board {
   display: flex;
@@ -27,39 +31,9 @@ body {
   height: 100%;
   background-color: bisque;
   gap: 20px;
+  background-size: cover;
 }
-
-@media screen and (max-width: 1400px) {
-  #root {
-    width: 1140px;
-    height: 1000px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  #root {
-    width: 960px;
-    height: 1000px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  #root {
-    width: 720px;
-    height: 1000px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #root {
-    width: 540px;
-    height: 1000px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  #root {
-    width: 100%;
-    height: 1000px;
-  }
+.header {
+  text-align: center;
+  font-size: 20px;
 }

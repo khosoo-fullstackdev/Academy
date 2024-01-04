@@ -84,6 +84,26 @@ boards.appendChild(inProgList);
 boards.appendChild(stuckList);
 boards.appendChild(doneList);
 
+const toDoHead = document.createElement("p");
+const inProgHead = document.createElement("p");
+const stuckHead = document.createElement("p");
+const doneHead = document.createElement("p");
+
+toDoListDiv.appendChild(toDoHead);
+inProgList.appendChild(inProgHead);
+stuckList.appendChild(stuckHead);
+doneList.appendChild(doneHead);
+
+toDoHead.setAttribute("class", "header");
+inProgHead.setAttribute("class", "header");
+stuckHead.setAttribute("class", "header");
+doneHead.setAttribute("class", "header");
+
+toDoHead.innerText = "To Do";
+inProgHead.innerText = "In progress";
+stuckHead.innerText = "Stuck";
+doneHead.innerText = "Done";
+
 const drawCard = (list) => {
   const newCard = document.createElement("div");
   const cardTitle = document.createElement("p");
@@ -136,3 +156,5 @@ function drawBoard(a) {
   });
 }
 drawBoard(toDoList);
+
+function addTask() {}
