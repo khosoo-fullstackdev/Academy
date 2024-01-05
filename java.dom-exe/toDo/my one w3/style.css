@@ -10,8 +10,6 @@ body {
   background-size: 100% 100%;
 }
 #root {
-  display: flex;
-  justify-content: center;
   margin: auto;
   width: 1140px;
   height: 1000px;
@@ -36,4 +34,24 @@ body {
 .header {
   text-align: center;
   font-size: 20px;
+}
+.addDiv {
+  margin: auto;
+  width: 200px;
+  height: 400px;
+  background-color: aquamarine;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* display: none; */
+}
+.modal {
+  display: none;
+  background-color: blanchedalmond;
+}
+button {
+  width: 50px;
+  height: 20px;
 }

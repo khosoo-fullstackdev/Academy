@@ -74,6 +74,11 @@ stuckList.setAttribute("class", "stuck");
 let doneList = document.createElement("div");
 doneList.setAttribute("class", "done");
 
+const addBtn1 = document.createElement("button");
+const addBtn2 = document.createElement("button");
+const addBtn3 = document.createElement("button");
+const addBtn4 = document.createElement("button");
+
 toDoListDiv.setAttribute("class", "board");
 inProgList.setAttribute("class", "board");
 stuckList.setAttribute("class", "board");
@@ -157,4 +162,42 @@ function drawBoard(a) {
 }
 drawBoard(toDoList);
 
-function addTask() {}
+function addTask() {
+  const addDiv = document.createElement("div");
+  const modal = document.createElement("div");
+  addDiv.setAttribute("id", "addDiv");
+  modal.setAttribute("class", "modal");
+  root.appendChild(addDiv);
+  addDiv.appendChild(modal);
+  const addTitle = document.createElement("p");
+  const addCardTitle = document.createElement("p");
+  const addCardDesp = document.createElement("p");
+  const addCardStatus = document.createElement("p");
+  const addCardPrio = document.createElement("p");
+  const titleInput = document.createElement("input");
+  const despInput = document.createElement("input");
+  const statusSelect = document.createElement("select");
+  const prioSelect = document.createElement("select");
+  modal.appendChild(addTitle);
+  modal.appendChild(addCardTitle);
+  modal.appendChild(addCardDesp);
+  modal.appendChild(addCardStatus);
+  modal.appendChild(addCardPrio);
+  modal.appendChild(titleInput);
+  modal.appendChild(despInput);
+  modal.appendChild(statusSelect);
+  modal.appendChild(prioSelect);
+  modal.appendChild(addTitle);
+}
+addTask();
+
+// toDoListDiv.appendChild(addBtn1);
+// inProgList.appendChild(addBtn2);
+// stuckList.appendChild(addBtn3);
+// doneList.appendChild(addBtn4);
+
+// let modalDiv = document.getElementById("addDiv");
+// addBtn1.onclick = function visibility() {
+//   modalDiv.style.display = "block";
+// };
+// console.log(modalDiv);
