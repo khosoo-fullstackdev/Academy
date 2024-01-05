@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#root {
+  background-position: center;
+  background: url("https://wallpapers.com/images/hd/nature-landscape-hd-usqznq19dscdjkf8.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.container {
+  width: 2100px;
+  margin: auto;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+.status_column {
+  width: 310px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #ebecf0;
+  border-radius: 10px;
+}
+.task_card {
+  width: 290px;
+  height: 150px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  justify-content: space-around;
+}
+button {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.status_head {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  gap: 20px;
+  padding: 15px;
+}
+.status_head span {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+}
+.add_card img {
+  width: 20px;
+  height: 20px;
+}
+.add_card {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+  border-radius: 5px;
+}
+.add_card:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+.backdrop_active {
+  position: absolute;
+  display: flex;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.show_addTask {
+  width: 400px;
+  height: fit-content;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  border: solid 1px;
+  gap: 20px;
+}
+.title_input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.desk_input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  height: 100px;
+  display: flex;
+
+  text-align: start;
+}
+.status_input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  overflow: visible;
+}
+.prio_input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.addTask_btn {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  margin-top: 24px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.message {
+  font-size: 12px;
+  color: red;
+  display: none;
+}

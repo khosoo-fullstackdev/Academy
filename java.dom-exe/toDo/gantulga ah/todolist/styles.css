@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#root {
+  background-position: center;
+  background: url("https://wallpapers.com/images/hd/nature-landscape-hd-usqznq19dscdjkf8.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.container {
+  width: 2100px;
+  margin: auto;
+  height: 100vh;
+  padding: 0px 16px;
+  display: flex;
+  justify-content: center;
+}
+.boards {
+  display: flex;
+  gap: 30px;
+  padding: 120px 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.board {
+  width: 310px;
+  height: fit-content;
+  background-color: #ebecf0;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-between;
+}
+.card_head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+.add_btn {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #ebecf0;
+}
+.add_btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.count_task {
+  font-size: 19px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+.add_btn img {
+  width: 22px;
+  height: 22px;
+}
+.backdrop_active {
+  position: absolute;
+  display: flex;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.show_addTask {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  border: solid 1px;
+  gap: 20px;
+}
+.title_input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.desk_input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  height: 100px;
+  display: flex;
+
+  text-align: start;
+}
+.status_input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  overflow: visible;
+}
+.prio_input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.addTask_btn {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  margin-top: 24px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.added_taskCard {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  cursor: grab;
+  display: flex;
+  gap: 12px;
+  font-family: "Roboto", sans-serif;
+  cursor: grab;
+}
+.status_todone {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.status_todone:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.added_taskContent {
+  flex: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.added_taskPrioBox {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+}
+.edit_delete {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.delete_btn {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.delete_btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.edit_btn {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.edit_btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.status_container {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.status_todone img {
+  width: 15px;
+  height: 15px;
+}
+.edit_btn img {
+  width: 13px;
+  height: 13px;
+}

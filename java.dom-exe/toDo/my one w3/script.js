@@ -1,203 +1,143 @@
-let toDoList = [
+let listArr = [
   {
-    title: "todo",
-    desp: "january",
-    status: "to do",
-    priority: "Low",
+    title: "car",
+    description: "march",
+    priority: "medium",
+    status: "To Do",
+    id: 1,
+  },
+  {
+    title: "ger",
+    description: "january",
+    priority: "medium",
+    status: "In Progress",
+    id: 2,
   },
   {
     title: "fitness",
-    desp: "february",
-    status: "stuck",
-    priority: "High",
+    description: "monthly",
+    priority: "high",
+    status: "Stuck",
+    id: 3,
   },
   {
-    title: "food",
-    desp: "march",
-    status: "in progress",
-    priority: "Medium",
-  },
-  {
-    title: "home",
-    desp: "january",
-    status: "done",
-    priority: "High",
-  },
-  {
-    title: "jog",
-    desp: "february",
-    status: "to do",
-    priority: "Medium",
-  },
-  {
-    title: "cook",
-    desp: "march",
-    status: "stuck",
-    priority: "Low",
-  },
-  {
-    title: "interview",
-    desp: "june",
-    status: "to do",
-    priority: "High",
-  },
-  {
-    title: "car",
-    desp: "march",
-    status: "in progress",
-    priority: "Medium",
-  },
-  {
-    title: "dentist",
-    desp: "april",
-    status: "stuck",
-    priority: "Medium",
-  },
-  {
-    title: "dance",
-    desp: "june",
-    status: "done",
-    priority: "Low",
+    title: "NewYear",
+    description: "december",
+    priority: "low",
+    status: "Done",
+    id: 4,
   },
 ];
+
 const root = document.getElementById("root");
+
 const boards = document.createElement("div");
+boards.setAttribute("class", "boards");
 root.appendChild(boards);
 
-boards.setAttribute("class", "boards");
-let toDoListDiv = document.createElement("div");
-toDoListDiv.setAttribute("class", "to-do");
-let inProgList = document.createElement("div");
-inProgList.setAttribute("class", "in-progress");
-let stuckList = document.createElement("div");
-stuckList.setAttribute("class", "stuck");
-let doneList = document.createElement("div");
-doneList.setAttribute("class", "done");
+const popUpDiv = document.createElement("div");
+root.appendChild(popUpDiv);
 
-const addBtn1 = document.createElement("button");
-const addBtn2 = document.createElement("button");
-const addBtn3 = document.createElement("button");
-const addBtn4 = document.createElement("button");
-
-toDoListDiv.setAttribute("class", "board");
-inProgList.setAttribute("class", "board");
-stuckList.setAttribute("class", "board");
-doneList.setAttribute("class", "board");
-
-boards.appendChild(toDoListDiv);
-boards.appendChild(inProgList);
-boards.appendChild(stuckList);
-boards.appendChild(doneList);
-
-const toDoHead = document.createElement("p");
-const inProgHead = document.createElement("p");
-const stuckHead = document.createElement("p");
-const doneHead = document.createElement("p");
-
-toDoListDiv.appendChild(toDoHead);
-inProgList.appendChild(inProgHead);
-stuckList.appendChild(stuckHead);
-doneList.appendChild(doneHead);
-
-toDoHead.setAttribute("class", "header");
-inProgHead.setAttribute("class", "header");
-stuckHead.setAttribute("class", "header");
-doneHead.setAttribute("class", "header");
-
-toDoHead.innerText = "To Do";
-inProgHead.innerText = "In progress";
-stuckHead.innerText = "Stuck";
-doneHead.innerText = "Done";
-
-const drawCard = (list) => {
-  const newCard = document.createElement("div");
-  const cardTitle = document.createElement("p");
-  const cardDesp = document.createElement("p");
-  const cardPrio = document.createElement("p");
-
-  newCard.setAttribute("class", "card");
-  cardTitle.setAttribute("class", "titles");
-  cardDesp.setAttribute("class", "descriptions");
-  cardPrio.setAttribute("class", "prioritys");
-
-  newCard.appendChild(cardTitle);
-  newCard.appendChild(cardDesp);
-  newCard.appendChild(cardPrio);
-
-  cardTitle.innerText = "Title:" + list.title;
-  cardDesp.innerText = "Description:" + list.desp;
-  cardPrio.innerText = "Priority:" + list.priority;
-  return newCard;
-};
-
-function drawBoard(a) {
-  let filterdToDoList = a.filter((b) => {
-    return b.status == "to do";
+function render(list) {
+  boards.innerHTML = "";
+  const toDoTask = list.filter((arr) => {
+    return arr.status === "To do";
   });
-  let filteredInProgList = a.filter((b) => {
-    return b.status == "in progress";
+  const todoStatusDiv = document.createElement("div");
+  todoStatusDiv.setAttribute("class", "status_column");
+
+  const toDoHead = document.createElement("div");
+  toDoHead.setAttribute("class", "status_head");
+  toDoHead.innerHTML = "To Do";
+  todoStatusDiv.appendChild(toDoHead);
+
+  const toDoCount = document.createElement("span");
+  toDoCount.innerHTML = toDoTask.length;
+  statusHead.appendChild(toDoCount);
+
+  taskTodo.map((task, index) => {
+    const newTask = createTask(task, index);
+
+    todoStatusDiv.appendChild(newTask);
+    container.appendChild(todoStatusDiv);
   });
-  let filteredStuckList = a.filter((b) => {
-    return b.status == "stuck";
+
+  const addCardButton = addCard();
+  todoStatusDiv.appendChild(addCardButton);
+
+  const taskInProgress = list.filter((todo) => {
+    return todo.status == "In Progress";
   });
-  let filteredDoneList = a.filter((b) => {
-    return b.status == "done";
+  const InProgressStatusDiv = document.createElement("div");
+  InProgressStatusDiv.setAttribute("class", "status_column");
+
+  const inProgHead = document.createElement("div");
+  inProgHead.setAttribute("class", "status_head");
+  inProgHead.innerHTML = "In Progress";
+  InProgressStatusDiv.appendChild(inProgHead);
+
+  const inProgCount = document.createElement("span");
+  inProgCount.innerHTML = taskInProgress.length;
+  statusHeadP.appendChild(inProgCount);
+
+  taskInProgress.map((task) => {
+    const newTask = createTask(task);
+
+    InProgressStatusDiv.appendChild(newTask);
+    container.appendChild(InProgressStatusDiv);
   });
-  filterdToDoList.map((c) => {
-    card = drawCard(c);
-    toDoListDiv.appendChild(card);
+
+  const addCardButton1 = addCard();
+  InProgressStatusDiv.appendChild(addCardButton1);
+
+  const taskStuck = list.filter((todo) => {
+    return todo.status == "Stuck";
   });
-  filteredInProgList.map((c) => {
-    card = drawCard(c);
-    inProgList.appendChild(card);
+  const stuckStatusDiv = document.createElement("div");
+  stuckStatusDiv.setAttribute("class", "status_column");
+
+  const statusHeadS = document.createElement("div");
+  statusHeadS.setAttribute("class", "status_head");
+  statusHeadS.innerHTML = "Stuck";
+  stuckStatusDiv.appendChild(statusHeadS);
+
+  const heatCountS = document.createElement("span");
+  heatCountS.innerHTML = taskStuck.length;
+  statusHeadS.appendChild(heatCountS);
+
+  taskStuck.map((task) => {
+    const newTask = createTask(task);
+
+    stuckStatusDiv.appendChild(newTask);
+    container.appendChild(stuckStatusDiv);
   });
-  filteredStuckList.map((c) => {
-    let card = drawCard(c);
-    stuckList.appendChild(card);
+
+  const addCardButton2 = addCard();
+  stuckStatusDiv.appendChild(addCardButton2);
+
+  const taskDone = list.filter((todo) => {
+    return todo.status == "Done";
   });
-  filteredDoneList.map((c) => {
-    let card = drawCard(c);
-    doneList.appendChild(card);
+  const doneStatusDiv = document.createElement("div");
+  doneStatusDiv.setAttribute("class", "status_column");
+
+  const statusHeadD = document.createElement("div");
+  statusHeadD.setAttribute("class", "status_head");
+  statusHeadD.innerHTML = "Done";
+  doneStatusDiv.appendChild(statusHeadD);
+
+  const heatCountD = document.createElement("span");
+  heatCountD.innerHTML = taskDone.length;
+  statusHeadD.appendChild(heatCountD);
+
+  taskDone.map((task) => {
+    const newTask = createTask(task);
+
+    doneStatusDiv.appendChild(newTask);
+    container.appendChild(doneStatusDiv);
   });
+
+  const addCardButton3 = addCard();
+  doneStatusDiv.appendChild(addCardButton3);
 }
-drawBoard(toDoList);
-
-function addTask() {
-  const addDiv = document.createElement("div");
-  const modal = document.createElement("div");
-  addDiv.setAttribute("id", "addDiv");
-  modal.setAttribute("class", "modal");
-  root.appendChild(addDiv);
-  addDiv.appendChild(modal);
-  const addTitle = document.createElement("p");
-  const addCardTitle = document.createElement("p");
-  const addCardDesp = document.createElement("p");
-  const addCardStatus = document.createElement("p");
-  const addCardPrio = document.createElement("p");
-  const titleInput = document.createElement("input");
-  const despInput = document.createElement("input");
-  const statusSelect = document.createElement("select");
-  const prioSelect = document.createElement("select");
-  modal.appendChild(addTitle);
-  modal.appendChild(addCardTitle);
-  modal.appendChild(addCardDesp);
-  modal.appendChild(addCardStatus);
-  modal.appendChild(addCardPrio);
-  modal.appendChild(titleInput);
-  modal.appendChild(despInput);
-  modal.appendChild(statusSelect);
-  modal.appendChild(prioSelect);
-  modal.appendChild(addTitle);
-}
-addTask();
-
-// toDoListDiv.appendChild(addBtn1);
-// inProgList.appendChild(addBtn2);
-// stuckList.appendChild(addBtn3);
-// doneList.appendChild(addBtn4);
-
-// let modalDiv = document.getElementById("addDiv");
-// addBtn1.onclick = function visibility() {
-//   modalDiv.style.display = "block";
-// };
-// console.log(modalDiv);
+renderTasks(tasksArr);
